@@ -1,2 +1,125 @@
-# Library-Management-Java
-Console library management project in Java, built while learning OOP.
+# Library Management System
+
+مشروع بسيط لإدارة مكتبة من خلال الكونسول، عملته أثناء تعلم البرمجة الكائنية OOP بلغة Java. طبّقت فيه الوراثة والكلاس المجرّد والواجهات، واستخدمت `ArrayList` ومصفوفة لتخزين الكائنات، مع حفظ البيانات في ملف محلي.
+
+## الوظائف
+
+- إضافة الكتب وعرضها وحذفها.
+- البحث عن كتاب برقم الكتاب أو بجزء من اسمه.
+- شراء نسخة من كتاب باستخدام رقمه، وتقليل الكمية المتوفرة بمقدار واحد.
+- إضافة الطلاب وعرض بياناتهم.
+- عرض تقرير يجمع الكتب والطلاب.
+- حفظ البيانات عند الخروج واسترجاعها عند تشغيل البرنامج مرة ثانية.
+
+البرنامج يمنع تكرار أرقام الكتب والأرقام الجامعية، ويرفض الحقول النصية الفارغة والأسعار والكميات السالبة. عملية الشراء هنا لتطبيق التعامل مع المخزون، ولا تشمل دفعًا إلكترونيًا.
+
+## التشغيل
+
+يحتاج المشروع إلى JDK، ويستخدم مكتبات Java الأساسية فقط.
+
+يمكن فتح مجلد `src` في بيئة تطوير Java وتشغيل الكلاس `FinalProject_1`، أو تنفيذ الأوامر التالية من مجلد المشروع في PowerShell:
+
+```powershell
+javac -d out (Get-ChildItem src/finalproject_1/*.java).FullName
+java -cp out finalproject_1.FinalProject_1
+```
+
+اختر رقم العملية من القائمة واتبع الأسئلة التي تظهر. لحفظ البيانات، اخرج باستخدام الخيار `9`. إغلاق نافذة البرنامج مباشرة لا يحفظ العمليات الجديدة.
+
+تُحفظ البيانات في `library.dat` داخل المجلد الذي شغّلت البرنامج منه، وتُقرأ تلقائيًا في التشغيل التالي. الملف محلي ولا يحتاج رفعه مع الكود. إذا تعذرت قراءته، يتوقف البرنامج حتى لا يستبدل البيانات الموجودة.
+
+## تنظيم الكلاسات
+
+| الكلاس | دوره |
+| --- | --- |
+| `Interfaces` | واجهة تحتوي على `printDetails()` لعرض التفاصيل. |
+| `Person` | كلاس مجرّد يحتوي على البيانات المشتركة بين الطالب والمؤلف. |
+| `Student` | بيانات الطالب، ويرث من `Person`. |
+| `Author` | بيانات المؤلف، ويرث من `Person`. |
+| `Book` | بيانات الكتاب ومرجع إلى المؤلف. |
+| `LibraryData` | قوائم الكتب والطلاب ومصفوفة الكتب. |
+| `Process` | عمليات المكتبة والتحقق من الإدخال وحفظ البيانات وقراءتها. |
+| `FinalProject_1` | نقطة تشغيل البرنامج والقائمة الرئيسية. |
+
+## مخطط UML
+
+المخطط يوضح العلاقات وأهم الخصائص والدوال. اختصرت دوال القراءة والكتابة `getters/setters` حتى يبقى واضحًا.
+
+```mermaid
+classDiagram
+    class Interfaces {
+        <<interface>>
+        +printDetails() void
+    }
+    class Person {
+        <<abstract>>
+        -String idNumber
+        -String name
+        -String gender
+        -String phone
+        -String address
+    }
+    class Student {
+        -String studentId
+        -String specialization
+        -String enrolledDate
+        +printDetails() void
+    }
+    class Author {
+        -String email
+        -int noOfBooks
+        +printDetails() void
+    }
+    class Book {
+        -String bookId
+        -String bookName
+        -String category
+        -Author author
+        -double price
+        -int quantity
+        +printDetails() void
+    }
+    class LibraryData {
+        -ArrayList~Book~ books
+        -ArrayList~Student~ students
+        -Book[] booksArray
+        +syncArray() void
+    }
+    class Process {
+        -LibraryData data
+        -String FILE_NAME
+        +showBooks() void
+        +addBookFromUser(Scanner input) void
+        +deleteBookFromUser(Scanner input) void
+        +searchBookFromUser(Scanner input) void
+        +buyBookFromUser(Scanner input) void
+        +showStudents() void
+        +addStudentFromUser(Scanner input) void
+        +fullReport() void
+        +saveToFile() void
+        +loadFromFile() void
+    }
+    class FinalProject_1 {
+        +main(String[] args) void$
+    }
+
+    Interfaces <|.. Person
+    Interfaces <|.. Book
+    Person <|-- Student
+    Person <|-- Author
+    Book o-- Author : author
+    LibraryData o-- Book : books
+    LibraryData o-- Student : students
+    Process --> LibraryData : data
+    FinalProject_1 ..> Process : uses
+```
+
+تستخدم كلاسات البيانات `Serializable` حتى يمكن حفظ الكائنات باستخدام `ObjectOutputStream` واسترجاعها باستخدام `ObjectInputStream`.
+
+## حدود المشروع
+
+ركزت في المشروع على أساسيات OOP وإدارة الكتب من الكونسول. بعض بيانات الطلاب والمؤلفين تحمل قيمًا افتراضية مثل `N/A`، والبرنامج لا يحتوي على نظام استعارة أو سجل مشتريات أو واجهة رسومية.
+
+## صاحب المشروع
+
+Adham Hashem
