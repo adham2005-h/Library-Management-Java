@@ -1,1 +1,142 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="1100" viewBox="0 0 1150 1100"><title>Library Management System class diagram</title><rect width="1150" height="1100" fill="#ffffff"/><defs><marker id="triangle" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M1,1 L12,7 L1,13 Z" fill="white" stroke="#334155"/></marker><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11" fill="none" stroke="#334155"/></marker></defs><path d="M270 215 L270 170 L500 170 L500 125" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#triangle)" stroke-dasharray="7 5"/><text x="285" y="158" font-family="Arial, sans-serif" font-size="16" fill="#334155">implements</text><path d="M920 215 L920 170 L680 170 L680 125" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#triangle)" stroke-dasharray="7 5"/><text x="770" y="158" font-family="Arial, sans-serif" font-size="16" fill="#334155">implements</text><path d="M185 500 L185 420 L210 420 L210 375" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#triangle)" /><text x="105" y="451" font-family="Arial, sans-serif" font-size="16" fill="#334155">extends</text><path d="M530 500 L530 420 L330 420 L330 375" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#triangle)" /><text x="545" y="451" font-family="Arial, sans-serif" font-size="16" fill="#334155">extends</text><path d="M750 300 L720 300 L720 465 L185 465 L185 500" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)" /><text x="440" y="455" font-family="Arial, sans-serif" font-size="16" fill="#334155">author</text><path d="M920 555 L920 400" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)" /><text x="934" y="490" font-family="Arial, sans-serif" font-size="16" fill="#334155">books</text><path d="M750 630 L695 630" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)" /><text x="700" y="655" font-family="Arial, sans-serif" font-size="16" fill="#334155">students</text><path d="M920 825 L920 710" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)" /><text x="935" y="775" font-family="Arial, sans-serif" font-size="16" fill="#334155">data</text><path d="M540 880 L750 880" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="7 5"/><text x="615" y="867" font-family="Arial, sans-serif" font-size="16" fill="#334155">uses</text><g font-family="Arial, sans-serif"><rect x="440" y="25" width="300" height="100" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2"/><path d="M440 65 H740" stroke="#334155"/><text x="590" y="52" text-anchor="middle" font-size="21" font-weight="bold" fill="#0f172a">Interfaces</text><text x="454" y="91" font-size="15" fill="#334155">interface</text><text x="454" y="115" font-size="15" fill="#334155">+ printDetails(): void</text></g><g font-family="Arial, sans-serif"><rect x="110" y="215" width="320" height="160" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2"/><path d="M110 255 H430" stroke="#334155"/><text x="270" y="242" text-anchor="middle" font-size="21" font-weight="bold" fill="#0f172a">Person</text><text x="124" y="281" font-size="15" fill="#334155">abstract</text><text x="124" y="305" font-size="15" fill="#334155">- idNumber, name, gender: String</text><text x="124" y="329" font-size="15" fill="#334155">- phone, address: String</text></g><g font-family="Arial, sans-serif"><rect x="750" y="215" width="340" height="185" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2"/><path d="M750 255 H1090" stroke="#334155"/><text x="920" y="242" text-anchor="middle" font-size="21" font-weight="bold" fill="#0f172a">Book</text><text x="764" y="281" font-size="15" fill="#334155">- bookId, bookName, category: String</text><text x="764" y="305" font-size="15" fill="#334155">- author: Author</text><text x="764" y="329" font-size="15" fill="#334155">- price: double</text><text x="764" y="353" font-size="15" fill="#334155">- quantity: int</text><text x="764" y="377" font-size="15" fill="#334155">+ printDetails(): void</text></g><g font-family="Arial, sans-serif"><rect x="35" y="500" width="300" height="135" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2"/><path d="M35 540 H335" stroke="#334155"/><text x="185" y="527" text-anchor="middle" font-size="21" font-weight="bold" fill="#0f172a">Author</text><text x="49" y="566" font-size="15" fill="#334155">- email: String</text><text x="49" y="590" font-size="15" fill="#334155">- noOfBooks: int</text><text x="49" y="614" font-size="15" fill="#334155">+ printDetails(): void</text></g><g font-family="Arial, sans-serif"><rect x="365" y="500" width="330" height="135" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2"/><path d="M365 540 H695" stroke="#334155"/><text x="530" y="527" text-anchor="middle" font-size="21" font-weight="bold" fill="#0f172a">Student</text><text x="379" y="566" font-size="15" fill="#334155">- studentId, specialization: String</text><text x="379" y="590" font-size="15" fill="#334155">- enrolledDate: String</text><text x="379" y="614" font-size="15" fill="#334155">+ printDetails(): void</text></g><g font-family="Arial, sans-serif"><rect x="750" y="555" width="340" height="155" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2"/><path d="M750 595 H1090" stroke="#334155"/><text x="920" y="582" text-anchor="middle" font-size="21" font-weight="bold" fill="#0f172a">LibraryData</text><text x="764" y="621" font-size="15" fill="#334155">- books: ArrayList&lt;Book&gt;</text><text x="764" y="645" font-size="15" fill="#334155">- students: ArrayList&lt;Student&gt;</text><text x="764" y="669" font-size="15" fill="#334155">- booksArray: Book[]</text><text x="764" y="693" font-size="15" fill="#334155">+ syncArray(): void</text></g><g font-family="Arial, sans-serif"><rect x="750" y="825" width="340" height="150" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2"/><path d="M750 865 H1090" stroke="#334155"/><text x="920" y="852" text-anchor="middle" font-size="21" font-weight="bold" fill="#0f172a">Process</text><text x="764" y="891" font-size="15" fill="#334155">- data: LibraryData</text><text x="764" y="915" font-size="15" fill="#334155">+ showBooks(), showStudents(): void</text><text x="764" y="939" font-size="15" fill="#334155">+ fullReport(): void</text><text x="764" y="963" font-size="15" fill="#334155">+ saveToFile(), loadFromFile(): void</text></g><g font-family="Arial, sans-serif"><rect x="110" y="830" width="430" height="100" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2"/><path d="M110 870 H540" stroke="#334155"/><text x="325" y="857" text-anchor="middle" font-size="21" font-weight="bold" fill="#0f172a">FinalProject_1</text><text x="124" y="896" font-size="15" fill="#334155">+ main(String[] args): void (static)</text></g><text x="35" y="1010" font-family="Arial, sans-serif" font-size="16" fill="#475569">Dashed triangle: interface implementation | Solid triangle: inheritance | Arrow: reference or use</text><text x="35" y="1040" font-family="Arial, sans-serif" font-size="15" fill="#475569">Person, Book and LibraryData implement java.io.Serializable; Student and Author inherit it.</text><text x="35" y="1065" font-family="Arial, sans-serif" font-size="15" fill="#475569">Book.author is optional (0..1); collections contain 0..* books/students. Getters/setters omitted.</text><text x="35" y="1090" font-family="Arial, sans-serif" font-size="15" fill="#475569">Operations are summarized. No borrowing, payment integration or graphical interface.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="1710" viewBox="0 0 1520 1710" role="img" aria-labelledby="title desc">
+<title id="title">Library Management System — UML class diagram</title>
+<desc id="desc">Seven project classes, the Interfaces interface and the Java Serializable interface. Solid hollow triangles show inheritance, dashed hollow triangles show interface realization, a hollow diamond at Book shows shared aggregation with Author, solid open arrows show stored references, and a dashed open arrow shows use by the main method. Public and private members match the Java source. Constructors and routine getters and setters are omitted.</desc>
+<rect width="1520" height="1710" fill="#fff"/>
+<defs><marker id="triangle" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L14 8 L1 15 Z" fill="white" stroke="#334155" stroke-width="2"/></marker><marker id="arrow" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L11 6.5 L1 12" fill="none" stroke="#334155" stroke-width="2"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#263449}.member{font-size:18px}.label{font-size:17px;paint-order:stroke;stroke:white;stroke-width:6px;stroke-linejoin:round}.relation{fill:none;stroke:#334155;stroke-width:2}.abstract{font-style:italic}.static{text-decoration:underline}</style>
+<text x="60" y="53" font-size="30" font-weight="bold">Library Management System</text>
+<text x="60" y="80" font-size="18">UML class diagram · package finalproject_1</text>
+<path class="relation" d="M230 350 V300 H530 V269" marker-end="url(#triangle)" stroke-dasharray="8 6"/>
+<path class="relation" d="M670 350 V269" marker-end="url(#triangle)" stroke-dasharray="8 6"/>
+<text x="310" y="287" class="label" >implements</text>
+<path class="relation" d="M60 410 H30 V100 H1235 V140" marker-end="url(#triangle)" stroke-dasharray="8 6"/>
+<path class="relation" d="M905 350 V285 H1150 V260" marker-end="url(#triangle)" stroke-dasharray="8 6"/>
+<path class="relation" d="M1340 350 V260" marker-end="url(#triangle)" stroke-dasharray="8 6"/>
+<text x="795" y="87" class="label" >implements Serializable</text>
+<text x="965" y="271" class="label" >implements</text>
+<path class="relation" d="M200 790 V608" marker-end="url(#triangle)"/>
+<path class="relation" d="M535 858 H465 V695 H345 V608" marker-end="url(#triangle)"/>
+<text x="215" y="709" class="label" >extends</text>
+<text x="370" y="683" class="label" >extends</text>
+<path class="relation" d="M735 670 V790" marker-end="url(#arrow)"/>
+<path d="M735 646 l-8 12 l8 12 l8 -12 Z" fill="white" stroke="#334155" stroke-width="2"/>
+<text x="750" y="730" class="label" >author</text>
+<text x="750" y="777" class="label" >0..1</text>
+<text x="674" y="670" class="label" >0..*</text>
+<path class="relation" d="M1040 424 H935" marker-end="url(#arrow)"/>
+<text x="964" y="408" class="label" >books</text>
+<text x="942" y="448" class="label" >0..*</text>
+<path class="relation" d="M1040 494 H935" marker-end="url(#arrow)"/>
+<text x="943" y="478" class="label" >booksArray</text>
+<text x="942" y="518" class="label" >0..*</text>
+<path class="relation" d="M1040 510 H970 V1050 H230 V1005" marker-end="url(#arrow)"/>
+<text x="540" y="1036" class="label" >students</text>
+<text x="246" y="1033" class="label" >0..*</text>
+<path class="relation" d="M1240 890 V538" marker-end="url(#arrow)"/>
+<text x="1255" y="739" class="label" >data</text>
+<text x="1255" y="566" class="label" >1</text>
+<path class="relation" d="M840 1350 H1000" marker-end="url(#arrow)" stroke-dasharray="8 6"/>
+<text x="877" y="1335" class="label" >creates / uses</text>
+<g id="Interfaces" data-kind="interface">
+<rect x="450" y="140" width="340" height="129" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<path d="M450 204 H790 M450 226 H790" class="relation"/>
+<text x="620.0" y="164" class="member" text-anchor="middle">«interface»</text>
+<text x="620.0" y="189" text-anchor="middle" font-size="24" font-weight="bold" class="">Interfaces</text>
+<text x="465" y="255" class="member abstract" >+ printDetails(): void</text>
+</g>
+<g id="java.io.Serializable" data-kind="interface">
+<rect x="1040" y="140" width="400" height="120" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<path d="M1040 204 H1440 M1040 226 H1440" class="relation"/>
+<text x="1240.0" y="164" class="member" text-anchor="middle">«interface»</text>
+<text x="1240.0" y="189" text-anchor="middle" font-size="24" font-weight="bold" class="">java.io.Serializable</text>
+<text x="1055" y="251" class="member" >Java marker interface</text>
+</g>
+<g id="Person" data-kind="abstract">
+<rect x="60" y="350" width="340" height="258" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<path d="M60 414 H400 M60 565 H400" class="relation"/>
+<text x="230.0" y="374" class="member" text-anchor="middle">abstract class</text>
+<text x="230.0" y="399" text-anchor="middle" font-size="24" font-weight="bold" class="abstract">Person</text>
+<text x="75" y="443" class="member" >- idNumber: String</text>
+<text x="75" y="470" class="member" >- name: String</text>
+<text x="75" y="497" class="member" >- gender: String</text>
+<text x="75" y="524" class="member" >- phone: String</text>
+<text x="75" y="551" class="member" >- address: String</text>
+<text x="75" y="594" class="member " >+ toString(): String</text>
+</g>
+<g id="Book" data-kind="class">
+<rect x="535" y="350" width="400" height="296" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<path d="M535 398 H935 M535 576 H935" class="relation"/>
+<text x="735.0" y="381" text-anchor="middle" font-size="24" font-weight="bold" class="">Book</text>
+<text x="550" y="427" class="member" >- bookId: String</text>
+<text x="550" y="454" class="member" >- bookName: String</text>
+<text x="550" y="481" class="member" >- category: String</text>
+<text x="550" y="508" class="member" >- author: Author</text>
+<text x="550" y="535" class="member" >- price: double</text>
+<text x="550" y="562" class="member" >- quantity: int</text>
+<text x="550" y="605" class="member " >+ printDetails(): void</text>
+<text x="550" y="632" class="member " >+ toString(): String</text>
+</g>
+<g id="LibraryData" data-kind="class">
+<rect x="1040" y="350" width="400" height="188" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<path d="M1040 398 H1440 M1040 495 H1440" class="relation"/>
+<text x="1240.0" y="381" text-anchor="middle" font-size="24" font-weight="bold" class="">LibraryData</text>
+<text x="1055" y="427" class="member" >- books: ArrayList&lt;Book&gt;</text>
+<text x="1055" y="454" class="member" >- students: ArrayList&lt;Student&gt;</text>
+<text x="1055" y="481" class="member" >- booksArray: Book[]</text>
+<text x="1055" y="524" class="member " >+ syncArray(): void</text>
+</g>
+<g id="Student" data-kind="class">
+<rect x="60" y="790" width="340" height="215" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<path d="M60 838 H400 M60 935 H400" class="relation"/>
+<text x="230.0" y="821" text-anchor="middle" font-size="24" font-weight="bold" class="">Student</text>
+<text x="75" y="867" class="member" >- studentId: String</text>
+<text x="75" y="894" class="member" >- specialization: String</text>
+<text x="75" y="921" class="member" >- enrolledDate: String</text>
+<text x="75" y="964" class="member " >+ printDetails(): void</text>
+<text x="75" y="991" class="member " >+ toString(): String</text>
+</g>
+<g id="Author" data-kind="class">
+<rect x="535" y="790" width="400" height="188" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<path d="M535 838 H935 M535 908 H935" class="relation"/>
+<text x="735.0" y="821" text-anchor="middle" font-size="24" font-weight="bold" class="">Author</text>
+<text x="550" y="867" class="member" >- email: String</text>
+<text x="550" y="894" class="member" >- noOfBooks: int</text>
+<text x="550" y="937" class="member " >+ printDetails(): void</text>
+<text x="550" y="964" class="member " >+ toString(): String</text>
+</g>
+<g id="Process" data-kind="class">
+<rect x="1000" y="890" width="470" height="539" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<path d="M1000 938 H1470 M1000 1008 H1470" class="relation"/>
+<text x="1235.0" y="921" text-anchor="middle" font-size="24" font-weight="bold" class="">Process</text>
+<text x="1015" y="967" class="member" >- data: LibraryData</text>
+<text x="1015" y="994" class="member" >- FILE_NAME: String = &quot;library.dat&quot; {readOnly}</text>
+<text x="1015" y="1037" class="member " >+ saveToFile(): void</text>
+<text x="1015" y="1064" class="member " >+ loadFromFile(): void</text>
+<text x="1015" y="1091" class="member " >+ showBooks(): void</text>
+<text x="1015" y="1118" class="member " >+ addBookFromUser(input: Scanner): void</text>
+<text x="1015" y="1145" class="member " >+ deleteBookFromUser(input: Scanner): void</text>
+<text x="1015" y="1172" class="member " >+ searchBookFromUser(input: Scanner): void</text>
+<text x="1015" y="1199" class="member " >+ buyBookFromUser(input: Scanner): void</text>
+<text x="1015" y="1226" class="member " >+ showStudents(): void</text>
+<text x="1015" y="1253" class="member " >+ addStudentFromUser(input: Scanner): void</text>
+<text x="1015" y="1280" class="member " >+ fullReport(): void</text>
+<text x="1015" y="1307" class="member " >- findBookById(id: String): Book</text>
+<text x="1015" y="1334" class="member " >- searchBook(key: String): Book</text>
+<text x="1015" y="1361" class="member " >- readText(input: Scanner): String</text>
+<text x="1015" y="1388" class="member " >- readInt(input: Scanner): int</text>
+<text x="1015" y="1415" class="member " >- readDouble(input: Scanner): double</text>
+</g>
+<g id="FinalProject_1" data-kind="class">
+<rect x="480" y="1295" width="360" height="113" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<path d="M480 1343 H840 M480 1365 H840" class="relation"/>
+<text x="660.0" y="1326" text-anchor="middle" font-size="24" font-weight="bold" class="">FinalProject_1</text>
+<text x="495" y="1394" class="member static" >+ main(args: String[]): void</text>
+</g>
+<path d="M60 1530 H1470" stroke="#cbd5e1"/>
+<text x="60" y="1562" class="member" >+ public   − private   |   Italic: abstract   |   Underlined: static   |   {readOnly}: final instance field</text>
+<text x="60" y="1591" class="member" >Hollow triangle: inheritance (solid) / interface realization (dashed). Hollow diamond: shared aggregation.</text>
+<text x="60" y="1620" class="member" >Open arrow: stored reference (solid) / dependency (dashed). 0..1: optional author; 0..*: any number of objects.</text>
+<text x="60" y="1649" class="member" >booksArray is synchronized from books and holds references to the same Book objects.</text>
+<text x="60" y="1678" class="member" >Constructors and routine getters/setters are omitted. Other Java-library and temporary dependencies are omitted.</text>
+<text x="60" y="1703" class="member" >Student and Author inherit Interfaces and Serializable through Person. Author can exist independently of Book.</text>
+</svg>

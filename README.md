@@ -38,11 +38,19 @@ Choose option `9` to save and exit. Closing the terminal directly does not save 
 
 ## UML
 
-The diagram shows the main fields, methods and relationships. Routine getters and setters are omitted for readability.
+The diagram follows the classes in `src/finalproject_1`. It shows the declared fields and methods, with constructors and routine getters and setters omitted to keep it readable.
 
 ![Library Management System UML](docs/uml.svg)
 
-The data classes use `Serializable`, `ObjectOutputStream` and `ObjectInputStream` for local storage.
+[View the full-size diagram](docs/uml.svg)
+
+- `Student` and `Author` extend the abstract `Person` class.
+- `Person` and `Book` implement `Interfaces`.
+- A `Book` can reference one `Author`, or none. The hollow diamond shows shared aggregation: an author can exist independently of a book.
+- `LibraryData` stores the book and student collections. `booksArray` is synchronized from `books` and references the same book objects.
+- `Process` holds the library data, and `FinalProject_1.main()` creates and uses `Process`.
+
+`Person`, `Book` and `LibraryData` implement `Serializable`; `Student` and `Author` inherit it through `Person`. `Process` uses `ObjectOutputStream` and `ObjectInputStream` to save and load `LibraryData` in `library.dat`.
 
 ## Project scope
 
