@@ -1,58 +1,53 @@
 # Library Management System
 
-مشروع بسيط لإدارة مكتبة من خلال الكونسول، عملته أثناء تعلم البرمجة الكائنية OOP بلغة Java. طبّقت فيه الوراثة والكلاس المجرّد والواجهات، واستخدمت `ArrayList` ومصفوفة لتخزين الكائنات، مع حفظ البيانات في ملف محلي.
+A console library project I built while learning OOP in Java. I used inheritance, an abstract class, interfaces, ArrayList, arrays and object serialization.
 
-## الوظائف
+## Features
 
-- إضافة الكتب وعرضها وحذفها.
-- البحث عن كتاب برقم الكتاب أو بجزء من اسمه.
-- شراء نسخة من كتاب باستخدام رقمه، وتقليل الكمية المتوفرة بمقدار واحد.
-- إضافة الطلاب وعرض بياناتهم.
-- عرض تقرير يجمع الكتب والطلاب.
-- حفظ البيانات عند الخروج واسترجاعها عند تشغيل البرنامج مرة ثانية.
+- Add, list, search and delete books.
+- Search by book ID or part of the title.
+- Buy a copy by ID and reduce the available quantity.
+- Add and list students, and display a combined report.
+- Save the library on exit and load it on the next run.
 
-البرنامج يمنع تكرار أرقام الكتب والأرقام الجامعية، ويرفض الحقول النصية الفارغة والأسعار والكميات السالبة. عملية الشراء هنا لتطبيق التعامل مع المخزون، ولا تشمل دفعًا إلكترونيًا.
+Book IDs and university IDs cannot be duplicated. Text fields cannot be blank, and prices and quantities must be finite and nonnegative.
 
-## التشغيل
+## Run locally
 
-يحتاج المشروع إلى JDK، ويستخدم مكتبات Java الأساسية فقط.
-
-يمكن فتح مجلد `src` في بيئة تطوير Java وتشغيل الكلاس `FinalProject_1`، أو تنفيذ الأوامر التالية من مجلد المشروع في PowerShell:
+Install a JDK. The project uses only the Java standard library. Run `FinalProject_1` in a Java IDE, or use PowerShell from the project folder:
 
 ```powershell
 javac -d out (Get-ChildItem src/finalproject_1/*.java).FullName
 java -cp out finalproject_1.FinalProject_1
 ```
 
-اختر رقم العملية من القائمة واتبع الأسئلة التي تظهر. لحفظ البيانات، اخرج باستخدام الخيار `9`. إغلاق نافذة البرنامج مباشرة لا يحفظ العمليات الجديدة.
+Choose option `9` to save and exit. Closing the terminal directly does not save new changes. Data is written to `library.dat` in the working directory and loaded on startup. The program stops if that file cannot be read.
 
-تُحفظ البيانات في `library.dat` داخل المجلد الذي شغّلت البرنامج منه، وتُقرأ تلقائيًا في التشغيل التالي. الملف محلي ولا يحتاج رفعه مع الكود. إذا تعذرت قراءته، يتوقف البرنامج حتى لا يستبدل البيانات الموجودة.
+## Classes
 
-## تنظيم الكلاسات
-
-| الكلاس | دوره |
+| Class | Responsibility |
 | --- | --- |
-| `Interfaces` | واجهة تحتوي على `printDetails()` لعرض التفاصيل. |
-| `Person` | كلاس مجرّد يحتوي على البيانات المشتركة بين الطالب والمؤلف. |
-| `Student` | بيانات الطالب، ويرث من `Person`. |
-| `Author` | بيانات المؤلف، ويرث من `Person`. |
-| `Book` | بيانات الكتاب ومرجع إلى المؤلف. |
-| `LibraryData` | قوائم الكتب والطلاب ومصفوفة الكتب. |
-| `Process` | عمليات المكتبة والتحقق من الإدخال وحفظ البيانات وقراءتها. |
-| `FinalProject_1` | نقطة تشغيل البرنامج والقائمة الرئيسية. |
+| Interfaces | Declares printDetails(). |
+| Person | Abstract class for shared person details. |
+| Student | Student details; inherits from Person. |
+| Author | Author details; inherits from Person. |
+| Book | Book details and an author reference. |
+| LibraryData | Book and student collections, and the book array. |
+| Process | Library operations, input checks and file storage. |
+| FinalProject_1 | Main method and console menu. |
 
-## مخطط UML
+## UML
 
-المخطط يوضح العلاقات وأهم الخصائص والدوال. اختصرت دوال القراءة والكتابة `getters/setters` حتى يبقى واضحًا.
+The diagram shows the main fields, methods and relationships. Routine getters and setters are omitted for readability.
 
 ![Library Management System UML](docs/uml.svg)
 
-تستخدم كلاسات البيانات `Serializable` حتى يمكن حفظ الكائنات باستخدام `ObjectOutputStream` واسترجاعها باستخدام `ObjectInputStream`.
+The data classes use `Serializable`, `ObjectOutputStream` and `ObjectInputStream` for local storage.
 
-## حدود المشروع
+## Project scope
 
-ركزت في المشروع على أساسيات OOP وإدارة الكتب من الكونسول. بعض بيانات الطلاب والمؤلفين تحمل قيمًا افتراضية مثل `N/A`، والبرنامج لا يحتوي على نظام استعارة أو سجل مشتريات أو واجهة رسومية.
+This is an OOP learning project. Some student and author details use placeholder values such as `N/A`. It has no borrowing system, purchase history, payment integration or graphical interface.
 
-## صاحب المشروع
+## Author
 
 Adham Hashem
