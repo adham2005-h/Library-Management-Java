@@ -68,6 +68,8 @@ public class FinalProject_1 {
                         System.out.println("Saved successfully. Bye!");
                     } catch (Exception e) {
                         System.out.println("Save error: " + e.getMessage());
+                        System.out.println("The library is still open. Fix the problem and try saving again.");
+                        choice = 0;
                     }
                     break;
                 default:
