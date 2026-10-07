@@ -21,7 +21,11 @@ javac -d out (Get-ChildItem src/finalproject_1/*.java).FullName
 java -cp out finalproject_1.FinalProject_1
 ```
 
-Choose option `9` to save and exit. Closing the terminal directly does not save new changes. Data is written to `library.dat` in the working directory and loaded on startup. The program stops if that file cannot be read.
+Choose option `9` to save and exit. If saving fails, the menu stays open so the problem can be fixed and saving retried. Closing the terminal directly does not save new changes. Data is written to `library.dat` in the working directory and loaded on startup. The program stops if that file cannot be read.
+
+## What I practiced
+
+Separating responsibilities into classes, inheritance and interfaces, collections, console validation and serializing related objects.
 
 ## Classes
 
